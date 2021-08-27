@@ -1,0 +1,47 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Total</title>
+</head>
+<body>
+    <script>
+	//1
+    for(let i = 2; i <= 100; i++) {
+    	let result = true;
+    	for(let j = 2; j < i; j++){
+    		if((i % j) === 0){
+    			result = false;
+    			break;
+    		}
+    	}
+    	if(result) {
+    		console.log(i)
+    	}
+    }
+	//2
+    let basket = [['Вилка', 100],['Ложка', 150],['Ножик',110],['Тарелка', 160],['Сковорода', 254],['Кастрюля', 320],];
+    function countBasketPrice(basket) {
+    	let totalBasket = 0;
+		for (let i = 0; i < basket.length; i++) {
+			totalBasket = basket[i[1]] + totalBasket;	
+		}
+	return console.log(totalBasket);
+    	}
+   	countBasketPrice(basket);
+	//3
+    var i;
+    for (i = 0; i <= 9; i++){
+        console.log(i);
+    }
+    //4
+    var n;
+    let i = 0;
+    n = 'x';
+    while (i < 20){
+    	console.log(n);
+    	n = n + 'x';
+    	i++;
+    }
+    </script>
+</body>
+</html>

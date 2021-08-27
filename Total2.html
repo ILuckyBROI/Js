@@ -1,0 +1,106 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Total</title>
+</head>
+<body>
+    <script>
+    //1
+	var a = 1, b = 1, c, d;
+	c = ++a; alert(c);           // 2 тут происходит операция с префиксом т.е. операция выполняется и записывается одновременно 
+	d = b++; alert(d);           // 1 тут просиходит операция с постфиксом по этому сначала полученную информацию выведут а потом обновят
+	c = (2+ ++a); alert(c);      // 5 тут так как в первом с = 2 тут с будет = 3 а 3 + 2 = 5 
+	d = (2+ b++); alert(d);      // 4 тут так как в первом с = 2 но так как значение заменят после этого дествия будет 2 + 2
+	alert(a);                    // 3 
+	alert(b);                    // 3 Значения будут равны так как в обоих случаях добавляли одинаковое количество операци но в случае значения b изменения этого значения записывалось после выполнения выражения
+	//2
+	 x = 5 так как действие в скобках приоритетнее и там используют сокращенный оператор
+	//3
+	    	var a = 24; 
+    	var b = -1;
+    	var c,d;
+    	c = (a >= 0);
+    	d = (b >= 0);
+    	if (c == true & d == true) {
+    		console.log(a - b);
+    	}
+    	else if (c == false & d == false) {
+    		console.log(a * b);
+    	}
+    	else if (c != d) {
+    		console.log(a + b);
+    	}
+	//4
+    	a = 5
+	switch (a) {
+		case 0:
+		console.log ('0');
+		case 1:
+			console.log ('1');
+		case 2:
+			console.log ('2');
+		case 3:
+			console.log ('3');
+		case 4:
+			console.log ('4');
+		case 5:
+			console.log ('5');
+		case 6:
+			console.log ('6');
+		case 7:
+			console.log ('7');
+		case 8:
+			console.log ('8');
+		case 9:
+			console.log ('9');
+		case 10:
+			console.log ('10');
+		case 11:
+			console.log ('11');
+		case 12:
+			console.log ('12');
+		case 13:
+			console.log ('13');
+		case 14:
+			console.log ('14');
+		case 15:
+			console.log ('15');
+		}
+	//5
+		function addit(x, y) {
+		    return console.log(x + y);
+		}
+		function diff(x, y) {
+		    return console.log(x - y);
+		}
+		function mult (x, y) {
+		    return console.log(x * y);
+		}
+		function div (x, y) {
+		    return console.log(x / y);
+		}
+		addit(3, 5);
+		diff(50, 8);
+		mult(24, 7);
+		div(100, 3);	
+	//6
+    	function mathOperation(arg1, arg2, operation){
+    	switch (operation) {
+    		case '+':
+    			console.log(arg1 + arg2);
+    			break;
+    		case '-':
+    			console.log(arg1 - arg2);
+    			break;
+    		case '*':
+    			console.log(arg1 * arg2);	
+    			break;
+    		case '/':
+    			console.log(arg1 / arg2);
+    			break;
+    		}
+    	}
+	mathOperation(2, 2, '/');
+    </script>
+</body>
+</html>
