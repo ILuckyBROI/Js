@@ -1,0 +1,53 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Total</title>
+</head>
+<body>
+    <script>
+     //1
+    function ob999(un) {
+       if (un <= 999) { 
+               u =  un % 10;
+               d = ((un % 100) - u) / 10;
+               h = (un - ((d * 10) + u)) / 100;
+               numb = {Сотни: h, Десятки: d, Единицы: u};
+           console.log(numb);}
+        else {console.log('Вы ввели число превышающие 999!');}
+    }
+    ob999(694)
+    //2
+    function Item(product, quantity, price) {
+        this.product = product;
+        this.quantity = quantity;
+        this.price = price;
+        this.showMyChart = function() {
+            return `${this.product} (количество: ${this.quantity})`;
+        }
+    }
+
+    let shoppingCart = []
+    shoppingCart.push(new Item('name_1', 3, 120));
+    shoppingCart.push(new Item('name_2', 10, 330));
+    shoppingCart.push(new Item('name_3', 9, 147));
+    shoppingCart.push(new Item('name_4', 4, 404));
+    shoppingCart.push(new Item('name_5', 16, 220));
+
+    function finalChart(shoppingCart) {
+        shoppingCart.forEach(val => {
+        console.log (`${val.showMyChart()}
+        Стоимость товара ${val.price}
+        Стоимость позиции ${val.quantity * val.price}`);
+        });
+    }
+    finalChart(shoppingCart);
+
+    function finalCost(shoppingCart) {
+        return shoppingCart.reduce( function (acc, shoppingCart){
+            return acc + (shoppingCart.price * shoppingCart.quantity)
+        }, 0)
+    };
+    console.log('Cтоимость заказа: ' + finalCost(shoppingCart));
+    </script>
+</body>
+</html>
